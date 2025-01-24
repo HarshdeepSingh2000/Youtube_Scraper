@@ -26,13 +26,13 @@ def scrape_all_with_replies():
         comment = i["snippet"]['topLevelComment']["snippet"]["textDisplay"]
         likes = i["snippet"]['topLevelComment']["snippet"]['likeCount']
         published_at = i["snippet"]['topLevelComment']["snippet"]['publishedAt'] 
-        replies = i["snippet"]['TotalReplyCount']
+        replies = i["snippet"]['totalReplyCount']
 
         List.append([name, comment, likes, published_at, replies])
 
-        TotalReplyCount = i["snippet"]['TotalReplyCount']
+        totalReplyCount = i["snippet"]['totalReplyCount']
 
-        if TotalReplyCount > 0:
+        if totalReplyCount > 0:
 
             parent = i["snippet"]['topLevelComment']["id"]
 
@@ -58,13 +58,13 @@ def scrape_all_with_replies():
             comment = i["snippet"]['topLevelComment']["snippet"]["textDisplay"]
             likes = i["snippet"]['topLevelComment']["snippet"]['likeCount']
             published_at = i["snippet"]['topLevelComment']["snippet"]['publishedAt']
-            replies = i["snippet"]['TotalReplyCount']
+            replies = i["snippet"]['totalReplyCount']
 
             List.append([name, comment, likes, published_at, replies])
 
-            TotalReplyCount = i["snippet"]['TotalReplyCount']
+            totalReplyCount = i["snippet"]['totalReplyCount']
 
-            if TotalReplyCount > 0:
+            if totalReplyCount > 0:
 
                 parent = i["snippet"]['topLevelComment']["id"]
 
